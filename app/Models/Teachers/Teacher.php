@@ -4,6 +4,7 @@ namespace App\Models\Teachers;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Reviews\Review;
 
 class Teacher extends Model
 {
@@ -13,6 +14,11 @@ class Teacher extends Model
     public function subject()
     {
         return $this->belongsTo(Subject::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 
     public function scopeFilterByName($query, $name)

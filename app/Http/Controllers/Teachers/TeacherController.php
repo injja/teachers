@@ -25,8 +25,7 @@ class TeacherController extends Controller
     public function show($id)
     {
         $teacher = $this->teacherService->show($id);
-        $reviews = $this->reviewsService->list($id);
-        return view('teachers.show', ['teacher' => $teacher, 'reviews' => $reviews]);
+        return view('teachers.show', ['teacher' => $teacher]);
     }
 
     public function destroy($id)

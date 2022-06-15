@@ -72,7 +72,7 @@
 
 
 
-        @foreach ($reviews as $review)
+        @foreach ($teacher->reviews as $review)
             <ul>
                 <li><b>Opinia od: </b>{{ $review->username }}</li>
                 <li><b>Ocena: </b>{{ $review->rating }}/5</li>
